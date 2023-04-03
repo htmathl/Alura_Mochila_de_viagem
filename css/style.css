@@ -94,20 +94,27 @@ html {
     display: block;
 }
 
-.cadastrar {
+.cadastrar, #resetar {
     background-color: #40112D;
     color: #FFFFFF;
     cursor: pointer;
 }
 
 .lista {
+    display: none;
     margin: 0;
     padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 80vh;
+    flex-direction: column;
+    flex-grow: 10;
 }
 
 .item {
     list-style: none;
     padding: 0.6em 2em;
+    /* min-width: 55vw; */
     background: #FFFFFF;
     border-radius: 10px;
     margin: 0 0 1em;
@@ -117,6 +124,7 @@ html {
     align-items: center;
     gap: 1em;
     font-size: 20px;
+    justify-content: space-between;
 }
 
 .item strong {
@@ -129,4 +137,3 @@ html {
     Background: #C5965F;
     font-weight: 400;
 }
-
