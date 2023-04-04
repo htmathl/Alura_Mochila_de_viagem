@@ -4,6 +4,10 @@ html {
     font-family: 'Roboto', cursive;
 }
 
+input::placeholder {
+    color: white;
+}
+
 .conteudo {
     padding: 10vh 3em 0;
     display: flex;

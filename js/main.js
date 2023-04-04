@@ -1,5 +1,6 @@
 const form = document.getElementById("novoItem");
 const lista = document.getElementById('lista');
+const quant = document.querySelector("#quantidade");
 const itens = JSON.parse(localStorage.getItem('itens')) || [];
 verificarElemento();
 
@@ -22,8 +23,13 @@ form.addEventListener('submit', evento => {
     const quantidade = evento.target.elements['quantidade'];
 
     if(quantidade.value === '') quantidade.value = 1;
+    
+    quant.style.backgroundColor = "white";
+    quant.removeAttribute('placeholder');
     if(quantidade.value > 999 || quantidade.value < 0) {
-        console.log("erro");
+        quant.style.backgroundColor = "red";
+        quant.setAttribute('placeholder', 'O número dever ser menor que 1000 e maior que 0');
+        quant.value = '';
         return;
     }
 
